@@ -9,6 +9,7 @@ public interface RestClient {
         String getPath()
         String getBody()
         String getRequestContentType()
+        Map asMap()
     }
 
     interface Response {

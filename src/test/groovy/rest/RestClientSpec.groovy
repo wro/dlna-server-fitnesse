@@ -11,6 +11,7 @@ class RestClientSpec extends Specification {
 
     def setup() {
         RESTClient.metaClass.put {Map m->
+            assert m.keySet().size() == 3
             capturedRequest = m
             [status: 201, data: 'data']
         }
@@ -41,6 +42,11 @@ class RestClientSpec extends Specification {
         String path
         String body
         String requestContentType
+
+        @Override
+        Map asMap() {
+            [path: path, body: body, requestContentType: requestContentType]
+        }
     }
 
 }

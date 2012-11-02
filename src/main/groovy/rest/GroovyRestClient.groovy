@@ -12,7 +12,7 @@ class GroovyRestClient implements RestClient {
 
     @Override
     RestClient.Response put(RestClient.Request request) {
-        new ResponseWrapper(delegate: restClient.put(request.properties))
+        new ResponseWrapper(delegate: restClient.put(request.asMap()))
     }
 
     class ResponseWrapper implements RestClient.Response {

@@ -35,5 +35,10 @@ class AddMediaSource {
         String getRequestContentType() {
             'application/json'
         }
+
+        @Override
+        Map asMap() {
+            [path: path, body: body, requestContentType: requestContentType]
+        }
     }
 }
