@@ -1,0 +1,21 @@
+!contents
+
+|import|
+|media.source|
+
+|Add Media Source                                     |
+|name    |location                |description|result?|
+|TV      |/media/wrombaut/TV      |           |ok     |
+|Schijf 1|/media/wrombaut/Schijf 1|           |ok     |
+|Schijf 1|/media/wrombaut/Schijf 1|           |failure|
+
+|Query: List Media Sources                    |
+|name    |location                |description|
+|TV      |/media/wrombaut/TV      |           |
+|Schijf 1|/media/wrombaut/Schijf 1|           |
+
+
+|Remove Media Source                      |
+|name    |location                |result?|
+|TV      |/media/wrombaut/TV      |ok     |
+|Schijf 1|/media/wrombaut/Schijf 1|ok     |

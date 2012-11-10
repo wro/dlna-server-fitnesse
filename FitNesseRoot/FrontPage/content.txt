@@ -1,0 +1,18 @@
+!define TEST_SYSTEM {slim} 
+!path /usr/local/dlna-server/*.jar
+
+Required libs are:
+commons-collections-3.2.1.jar
+commons-loggin-1.1.1.jar
+dlna-server-fitnesse.jar
+groovy-all-1.8.5.jar
+http-builder-0.6.jar
+httpclietn-4.2.1.jar
+httpcore-4.2.1.jar
+json-lib-2.3-jdk15.jar
+nekohtml-1.9.1.6.jar
+xercesImpl-2.9.1.jar
+xml-resolver-1.2.jar
+spring-core-3.1.3.RELEASE.jar
+
+!contents

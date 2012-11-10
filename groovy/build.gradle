@@ -1,0 +1,26 @@
+apply plugin:'idea'
+apply plugin:'groovy'
+apply plugin:'maven'
+
+group = 'dlna-server'
+version = System.getenv('VERSION') ?: 'dev-SNAPSHOT'
+archivesBaseName = 'fitnesse'
+sourceCompatibility = 1.6
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    groovy 'org.codehaus.groovy:groovy:1.8.6'
+    compile 'dlna-server:core:dev-SNAPSHOT'
+    compile "org.spockframework:spock-core:0.7-groovy-1.8", {
+        exclude module: 'groovy-all'
+    }
+    compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.6'
+    compile 'org.springframework:spring-core:3.1.3.RELEASE'
+    compile 'org.springframework:spring-beans:3.1.3.RELEASE'
+    compile 'org.springframework:spring-context-support:3.1.3.RELEASE'
+    deployerJars "org.apache.maven.wagon:wagon-http:1.0-beta-2"
+}
